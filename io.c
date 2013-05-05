@@ -347,6 +347,7 @@ do_scheduled_stream(int status, FdEventHandlerPtr event)
     }
 
     assert(i > 0);
+    assert(request->fd > 0);
 
     if((request->operation & IO_MASK) == IO_WRITE) {
         if(i > 1) 
